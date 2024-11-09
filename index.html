@@ -1,1 +1,29 @@
-Hello world
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <link rel="icon" type="image/x-icon" href="owl_simple.svg">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <script src="jquery.js"></script>
+        <script>
+            $(function () {
+                var includes = $('[data-include]')
+                $.each(includes, function () {
+                    var file = $(this).data('include') + '.html'
+                    $(this).load(file)
+                })
+            })
+        </script>
+    </head>
+    <body>
+        <div data-include="header"></div>
+        <div data-include="topnav"></div>
+
+    <p>Hello everyone, this is my blog</p>
+
+    </body>
+</html>
+
+
